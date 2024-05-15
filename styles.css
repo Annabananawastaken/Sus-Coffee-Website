@@ -1,3 +1,4 @@
+
 *{
     margin: 0;
     padding: 0;
@@ -6,7 +7,7 @@
 }
 
 .scroll-watcher {
-    height: 10px;
+    height: 15px;
     position: fixed;
     top: 0;
     z-index: 100;
@@ -33,32 +34,63 @@
 .content-area {
     padding: 80px;
 }
-.header{
-    position: fixed;
+.header {
+    position: fixed; /* Fix the header at the top */
     top: 0;
-    left: 0;   
-    width: 100%;
-    padding: 15px 100px;
-    background: rgb(198, 198, 198);
-    display: flex;
-    justify-content: space-between;
-    z-index: 100;
+    width: 100%; /* Make the header span the full width */
+    background-color: #f1f1f1; /* Background color for the header */
+    z-index: 1000; /* Ensure the header is above other content */
+    height: 50px;
 }
-.navbar{
-    align-items: center;
+
+.navbar {
+    display: flex; /* Use flexbox for the navbar */
+    justify-content: space-around; /* Space out the navbar items */
+    padding: 10px 0; /* Padding for the navbar */
 }
+
 .navbar a {
-    position: relative;
-    font-size: 18px;
-    color: white;
-    text-shadow: 1px 1px 4px #000;
-    font-weight: 500;
-    text-decoration: none;
-    margin-left: 40px;
+    padding-top: 5px;
+    text-decoration: none; /* Remove underline from links */
+    color: #000; /* Set link color */
+    font-weight: bold; /* Bold font for links */
+}
+
+/* Ensure each section has enough spacing */
+section {
+    padding: 60px 0; /* Add padding to top and bottom of each section */
+}
+
+h1 {
+    margin-top: 0; /* Ensure there is no extra margin on top of headings */
+}
+
+.image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30vh; /* Use the full height of the viewport */
+    padding-top: 60px;
+
+}
+.subtitle {
+    background-color: rgba(251, 255, 235, 0.8); /* Semi-transparent white background */
+    padding: 10px 20px; /* Padding around the text */
+    margin: 10px 0; /* Margin for spacing around the element */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Optional: adds shadow for depth */
+    width: fit-content; /* Ensures the background only covers the text width */
+    border-radius: 8px; /* Optional: rounded corners for aesthetics */
+}
+
+.image img {
+    max-width: 100%; /* Limits the image width to 100% of its container */
+    height: auto; /* Maintains the aspect ratio */
+    max-height: 35vh; /* Optionally limits the image height to 90% of the viewport height */
 }
 .supply-chain-area {
     width: 100%;
     text-align: center; /* Centers the title, doesn't affect flex items */
+    padding-bottom: 40px;
 }
 
 .sections {
@@ -108,29 +140,38 @@ p{
     position: absolute;  /* Takes the element out of the normal flow and positions it relative to the nearest positioned ancestor */
     left: 0;   /* Aligns the text box to the left side of its nearest positioned ancestor */
     top: 150px; /* Example: Positions the text box 20px from the top of the ancestor */
-}ß
+}
+
 .supply-chain-area, h1{
     font-size: 250%;
 }
 
 .two {
-    background-color: rgb(69, 99, 70);
-
+    background-image: url('/Farming.jpeg');
+    background-size: cover; /* Cover the entire area of the element */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; 
 }
 
 .three{
-    background-color:rgb(112, 80, 40);
-
+    background-image: url('/Roasting.jpeg');
+    background-size: cover; /* Cover the entire area of the element */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; 
 }
 
 .four{
-    background-color:rgb(135, 175, 230);
-
+    background-image: url('/Transportation.jpeg');
+    background-size: cover; /* Cover the entire area of the element */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; 
 }
 
 .five{
-    background-color:bisque;
-
+    background-image: url('/Packaging.jpeg');
+    background-size: cover; /* Cover the entire area of the element */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; 
 }
 
 .six{
@@ -141,5 +182,3 @@ p{
     background-color:rgb(255, 255, 255);
 
 }
-
-
